@@ -78,9 +78,11 @@ public class LogCalculator implements TelephoneBillCalculator {
         if(mostCommon.size() == 1)
             return mostCommon.get(0);
 
+        //vrátit nejvyšší aritmetické číslo
         return getHighestPhoneNumber(mostCommon);
     }
 
+    //nalezení nejvyšší aritmetické hodnoty čísla
     private String getHighestPhoneNumber(ArrayList<String> phoneList) {
         BigDecimal highestPhoneNumber = new BigDecimal(phoneList.get(0));
         for (String phone : phoneList)
